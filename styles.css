@@ -1,0 +1,346 @@
+/*{
+    border: solid 1px red;
+}*/
+:root{
+    font-family: 'Inter', sans-serif;
+    --main-bg-color: #FFE15D;
+    --main-color: #B01E68;
+    --head-foot-color: #F49D1A;
+    --third-color: #DC3535;
+    --buttons: #E0144C;
+}
+
+body{
+    background: linear-gradient(var(--main-bg-color), #B05A7A, var(--main-bg-color));
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: linear-gradient(var(--head-foot-color), white, var(--head-foot-color))
+}
+header>img{
+    position: absolute;
+    left: 48px;
+}
+
+h1{
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    color: var(--main-color);
+}
+header button{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 40px;
+    
+}
+header button:hover{
+    transition: 0.6s ease;
+    transform: rotate(-180deg);
+}
+header button:active{
+    transform: scale(0.8);
+}
+
+main{
+    background-color: linear-gradient(var(--main-bg-color), white, var(--main-bg-color));
+    height: 80vh;
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.message-input{
+    /*background-color: #B05A7A;*/
+    width: 75%;
+}
+
+#tobecoded{
+    width: 80%;
+    height: 70%;
+    position: relative;
+    top: 5%;
+    left: 10%;
+    resize: none;
+    font-size: 2em;
+    color: var(--main-color);
+    border: none;
+    background: none;
+}
+#tobecoded::placeholder{
+    color: var(--main-color);
+}
+#tobecoded:focus{
+    outline: none;
+}
+.warning{
+    position: relative;
+    top: 5%;
+    left: 10.5%;
+    width: 100%;
+}
+.buttons{
+    position: relative;
+    top: 7.5%;
+    display: flex;
+    justify-content: center;
+}
+.buttons>button{
+    height: 55px;
+    width: 200px;
+    margin-left: 25px;
+    border-radius: 2em;
+    border: none;
+}
+.code{
+    padding: 17px 40px;
+    background-color: var(--buttons);
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
+    letter-spacing: 1px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    font-weight: bold;
+    color: white;
+}
+.code:hover{
+    letter-spacing: 3px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.code:active{
+    letter-spacing: 3px;
+    background-color: var(--buttons);
+    color: white;
+    box-shadow: 2px 2px 20px 5px #89375F;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+.decode{
+    padding: 17px 20px;
+    background-color: white;
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
+    letter-spacing: 1px;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+.decode:hover{
+    letter-spacing: 3px;
+    background-color: var(--buttons);
+    box-shadow: 2px 2px 20px 5px #89375F;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.decode:active{
+    letter-spacing: 3px;
+    background-color: white;
+    color: black;
+    box-shadow: none;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+.message-output{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.visible-img{
+    background-color: white;
+    width: 90%;
+    height: 95%;
+    text-align: center;
+    border-radius: 2em;
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
+    /*display: none;*/
+}
+.visible-img>img{
+    width: 100%;
+    height: 50%;
+    padding-top: 70px;
+    padding-bottom: 0;
+}
+.subtitle{
+    font-size: 1.16em;
+    font-weight: bold;
+    padding: 0 10px 5px 10px;
+}
+.indication{
+    font-size: 0.9em;
+    font-weight: 500;
+    padding-top: 5px 15px;
+    color: #495057;
+}
+
+.message-processed{
+    display: none;
+    /*display: flex;*/
+    flex-direction: column;
+    width: 90%;
+    height: 95%;
+}
+
+#message-shown{
+    width: 98%;
+    height: 80%;
+    position: relative;
+    top: 0;
+    resize: none;
+    font-size: 2em;
+    background-color: white;
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
+    border-radius: 0.5em;
+    font-size: 2em;
+}
+
+.copy{
+    position: relative;
+    top: 2.5%;
+    left: 22%;
+    width: 60%;
+    height: 12.5%;
+    padding: 1% 5%;
+    background-color: white;
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
+    border-radius: 2em;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.copy:hover{
+    letter-spacing: 3px;
+    background-color: #54B435;
+    color: white;
+    box-shadow: 0px 7px 29px 5px #379237;
+    font-weight: bold;
+    cursor: pointer;
+}
+.copy:active{
+    letter-spacing: 3px;
+    background-color: #54B435;
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 7px 29px 5px #379237;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+
+
+footer{
+    background-color: linear-gradient(var(--head-foot-color), white, var(--head-foot-color));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 25px 0;
+}
+.footer-logo{
+    max-width: 48px;
+}
+.credits{
+    padding: 15px;
+    font-size: 1.1em;
+}
+.social{
+    padding: 0 5px;
+}
+.social img{
+    border-radius: 2em;
+    width: 48px;
+    transition: all 0.7s ease ;
+}
+.social img:hover{
+    box-shadow: 1px 1px 25px 2px black;
+    transform: scale(1.1);
+}
+
+
+/*Tablets devices*/
+@media (max-width: 800px){
+    body{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        height: 80vh;
+        margin: 0 auto;
+    }
+    
+    .message-input{
+        width: 100%;
+        height: 65%;
+    }
+    .message-output{
+        width: 100%;
+        height: 35%;
+    }
+    .visible-img{
+        margin-top: 25px;
+        /*display: none;*/
+    }
+    .message-processed{
+        display: none;
+        /*display: flex;*/
+        width: 100%;
+        height: 100%;
+    }
+    #message-shown{
+        height: 60%;
+        margin-top: 25px;
+    }
+    .subtitle{
+        font-size: 1.3em;
+        margin: 45px 0 25px 0 ;
+    }
+    .indication{
+        font-size: 1em;
+        margin: 25px;
+    }
+    .visible-img>img{
+        display: none;
+    }
+}
+
+/*Cellphone devices*/
+@media (max-width: 540px){
+    h1{
+        font-size: 1.65em;
+    }
+    header>img{
+        height: 36px;
+        left: 30px;
+        top: 30px;
+    }
+    header button{
+        transform: scale(0.8);
+        right: 20px;
+        top: 20px;
+    }
+    .warning{
+        font-size: 0.8em;
+    }
+    .buttons>button{
+        font-size: 0.7em;
+    }
+    .credits{
+        text-align: center;
+    }
+}

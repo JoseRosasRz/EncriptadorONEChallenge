@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Encriptador | Alura Challenge</title>
+</head>
+<body>
+
+    <header>
+
+            <img src="images/logo.svg" alt="">
+            <h1>Encriptador</h1>
+            <button id="restore" onclick="initialState()"><img src="images/restore.png" alt="Restaurar pagina a estado inicial"></button>
+
+    </header>
+
+    <main>
+
+        <section class="message-input">
+
+            <textarea name="" id="tobecoded" placeholder="Ingresa tu mensaje aquí..."></textarea>
+            <p class="warning"><img src="images/warning.svg" alt=""> Solo letras minúsculas y sin acentos</p>
+
+            <div class="buttons">
+
+                <button class="code" id="code" onclick="toCode()">Encriptar</button>
+                <button class="decode" id="decode" onclick="deCode()">Desencriptar</button>
+
+            </div>
+
+        </section>
+
+        <section class="message-output">
+
+            <div class="visible-img" id="icon">
+                <img src="images/munheco.svg" alt="">
+                <p class="subtitle">Ningún mensaje fue encontrado</p>
+                <p class="indication">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <div class="message-processed" id="message-processed">
+
+                <textarea name="" id="message-shown" disabled></textarea>
+                <button class="copy" id="copy" onclick="copyMessage(), returningOriginalProperties()">Copiar</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <img class="footer-logo" src="images/logo.svg" alt="">
+        
+        <p class="credits">Dev: José Israel Rosas Ruiz | Copyright 2023 | Alura x Oracle</p>
+        
+        <div class="links-container">
+            <a class="social" href="https://github.com/JoseRosasRz" target="_blank"><img src="images/github_logo.svg" alt="Logo github, direcciona a github personal"></a>
+            <a class="social" href="https://www.linkedin.com/in/jos%C3%A9-israel-rosas-ruiz/" target="_blank"><img src="images/linkedin_logo.svg" alt="Logo linkedIn, direcciona a linkedIn personal"></a>
+        </div>
+
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
