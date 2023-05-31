@@ -127,3 +127,15 @@ function initialState(){
     messageProcessed.style.display = "none";
     document.getElementById("tobecoded").value = "";
 }
+
+//Verificar si el navegador es safari
+let textarea = document.getElementById("message-shown");
+
+let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (isSafari) {
+    textarea.addEventListener("focus", function(){
+        this.blur();
+        this.style.backgroundColor = "#ffffff";
+    });
+}
