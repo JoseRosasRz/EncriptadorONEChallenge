@@ -337,15 +337,21 @@ footer{
         right: 20px;
         top: 20px;
     }
-    .buttons{
-        position: relative;
-        left: -12px;
+    #tobecoded{
+        height: 60%;
     }
     .warning{
         font-size: 0.8em;
     }
+    .buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     .buttons>button{
         font-size: 0.7em;
+        width: 80%;
+        margin: 5px auto;
     }
     .credits{
         text-align: center;
